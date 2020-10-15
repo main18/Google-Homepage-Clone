@@ -1,0 +1,52 @@
+/*VARIABLES*/
+//COLORS
+$color-grey-light1: #DFE1E5;
+$color-grey-light2: #F4F4F4;
+$color-grey-light3: #C6C6C6; 
+$color-grey-light4: #F2F2F2; 
+$color-grey-light5: #E4E4E4;
+$color-grey-light6: #F6F6F6;
+$color-grey-light7: #E8E8E8;
+$color-grey-light8: #F7F8F8; 
+$color-grey-dark1: #5F6368;  
+$color-grey-dark2: #9AA0A6;  
+$color-grey-dark3: #737373;  
+$color-grey-dark4: #434343;  
+$color-black: #000;
+$color-white: #fff;
+$color-blue: #e6ecff;
+$color-blue2: #1A73E8;
+
+//BREAKPOINTS
+/*
+$phone: 37.5em; //max-width : => 600px
+$tab-port: 56.25em; //max-width : => 900px
+$tab-land: 75em; //max-width : => 1200px  
+$big-desktop:112.5em; //min-width : => 1800px
+*/
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+	box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%; // 10px / 16px * 100    
+    font-family: Arial, Helvetica, sans-serif;
+    @media (max-width: 900px) {
+        font-size: 40%;
+    }
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 7vh 80vh 13vh;
+}

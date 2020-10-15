@@ -1,0 +1,44 @@
+.navbar{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    //padding: 1.2% 0 .8% 0;
+    
+    &__nav{
+        display: flex;
+        list-style: none;
+        margin-right: 1.5rem;
+        align-items: center;
+        .fa-th{
+            color: $color-grey-dark3;
+            font-size: 1.2rem;
+            font-weight: 550;
+            cursor: pointer;
+            &:hover{
+                color: $color-black;
+            }
+        }
+        &--item{
+            margin: 0 .6rem;
+            color: $color-black;
+            &:hover{
+                text-decoration: underline;
+                color: $color-grey-dark4;
+            }
+            &__link{
+                &:link,
+                &:visited{
+                    text-decoration: none;
+                    color: black;
+                    font-size: .8rem;
+                }
+            }
+           &-img{
+                width: 1.6rem;
+                border-radius: 100%;
+                cursor: pointer;
+           }
+        }
+    }
+}

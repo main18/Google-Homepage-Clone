@@ -1,0 +1,72 @@
+.dropdown{
+    &__checkbox{
+        display: none;
+    }
+    &__checkbox:checked ~ &__background{
+        display: block;
+    }
+    
+    &__background{
+        border-radius: .5rem;
+        z-index: 100000;
+        height: 30rem;
+        width: 21rem;
+        display: none;
+        position: fixed;
+        top: 9%;
+        right: 3%;
+        background-color: $color-white;
+        box-shadow: 0 0 .3rem 0 $color-grey-dark3;
+        overflow: auto;
+    }
+    
+    &__list{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1rem;
+        justify-items: center;
+        align-items: center;
+        padding: 1rem;
+        
+    }
+
+    &__icon{
+        width: 3rem;
+        border-radius: 5rem;
+    }
+
+    &__icon-extra{
+        font-size: 3rem;
+        color: $color-black;
+    }
+
+    &__item{
+        width: 5rem;
+        height: 5rem;
+        justify-self: center;
+        align-self: center;
+        border-radius: .7rem;
+        display: grid;
+        &:hover{
+            background-color: $color-blue;
+        }
+    }
+    
+    &__link{
+        &:link,
+        &:visited{
+            color: $color-grey-dark3;
+            text-decoration: none;
+            color: $color-black;
+            font-size: .9rem;
+        }
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 1;
+        justify-items: center;
+        align-items: center;
+    }
+
+}

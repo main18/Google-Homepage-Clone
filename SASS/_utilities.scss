@@ -1,0 +1,13 @@
+.small-margin{
+    margin: 1.2rem;
+}
+
+@mixin link_reset {
+    &:link,
+    &:visited{
+        text-decoration: none;
+        color:$color-grey-dark1;
+        font-size: .88rem;
+    }
+}
+

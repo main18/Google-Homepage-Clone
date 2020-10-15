@@ -1,0 +1,67 @@
+.footer{
+    background-color: $color-grey-light4;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    &__list{
+        &-1{
+            width: 100%;
+            border-top: 1px solid $color-grey-light5;
+            border-bottom: 1px solid $color-grey-light5;
+            color: $color-grey-dark1;
+            display: flex;
+            align-items: center;
+            &-country-name{
+                margin: 0 2rem;
+                font-size: .95rem;
+                font-weight: lighter;
+            }
+        }
+        &-2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &--left{
+                list-style: none;
+                display: flex;
+                margin: 0 2rem;
+                
+                &-item{
+                    &:hover{
+                    text-decoration: underline;
+                }
+                    &:not(:first-child){
+                        margin: 0 .8rem;
+                    }
+                    &:first-child{
+                        margin-right: .8rem;
+                    }
+                }
+                &-link{
+                    @include link_reset();
+                }
+            }
+            &--right{
+                display: flex;
+                list-style: none;
+                margin: 0 2rem;
+                
+                &-item{
+                    &:hover{
+                    text-decoration: underline;
+                }
+                    
+                    &:not(:last-child){
+                        margin: 0 .8rem;
+                    }
+                    
+                    &:last-child{
+                        margin-left: .8rem;
+                    }
+                }
+                &-link{
+                    @include link_reset();
+                } 
+            }
+        }   
+    }
+}
