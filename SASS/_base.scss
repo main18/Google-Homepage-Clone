@@ -33,16 +33,25 @@ $big-desktop:112.5em; //min-width : => 1800px
 	box-sizing: inherit;
 }
 
-html{
-    box-sizing: border-box;
+html{  
+    font-size: 100%; // 10px / 16px * 100  
+    @include responsive(tab-land){
+        font-size: 97%;
+    } 
+    @include responsive(tab-port){
+        font-size: 85%;
+    } 
+    @include responsive(phone){
+        font-size: 70%;
+    } 
+    @include responsive(big-desktop){
+        font-size: 120%;
+    } 
 }
 
 body{
-    font-size: 62.5%; // 10px / 16px * 100    
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    @media (max-width: 900px) {
-        font-size: 40%;
-    }
 }
 
 main{

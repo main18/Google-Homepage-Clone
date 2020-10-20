@@ -1,3 +1,14 @@
+.small-margin {
+  margin: 1.2rem;
+}
+
+/*
+phone => 0 -- 600px => 37.5em
+tab-port => 600px -- 900px => 56.25em
+tab-land => 900px -- 1200px => 75em
+[1200px -- 1800px] => is where our normal styles apply
++1800px => big desktop => 112.5em
+*/
 /*VARIABLES*/
 /*
 $phone: 37.5em; //max-width : => 600px
@@ -15,19 +26,37 @@ $big-desktop:112.5em; //min-width : => 1800px
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-size: 100%;
+}
+
+@media (min-width: 56.25) and (max-width: 75em) {
+  html {
+    font-size: 97%;
+  }
+}
+
+@media (min-width: 43.75em) and (max-width: 56.25em) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 43.75em) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 120%;
+  }
 }
 
 body {
-  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-@media (max-width: 900px) {
-  body {
-    font-size: 40%;
-  }
 }
 
 main {
@@ -37,10 +66,6 @@ main {
       grid-template-columns: 1;
   -ms-grid-rows: 7vh 80vh 13vh;
       grid-template-rows: 7vh 80vh 13vh;
-}
-
-.small-margin {
-  margin: 1.2rem;
 }
 
 .navbar {
@@ -440,6 +465,7 @@ main {
 
 .main-content {
   background-color: white;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,50 +482,61 @@ main {
   position: relative;
 }
 
-.main-content .fa-search {
-  position: absolute;
-  top: 50%;
-  left: 30.5%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.main-content__searchbox {
+  width: 36rem;
+  height: 3rem;
+  border: 1px solid #DFE1E5;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 30px;
+  padding: 1rem;
+  -webkit-transform: translateY(0.6rem);
+          transform: translateY(0.6rem);
+}
+
+.main-content__searchbox:hover {
+  -webkit-box-shadow: 0 0.1rem 0.35rem #DFE1E5;
+          box-shadow: 0 0.1rem 0.35rem #DFE1E5;
+}
+
+.main-content__searchbox:focus-within {
+  -webkit-box-shadow: 0 0.1rem 0.35rem #DFE1E5;
+          box-shadow: 0 0.1rem 0.35rem #DFE1E5;
+}
+
+.main-content__searchbox__searchbar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.main-content__searchbox__searchbar:focus {
+  outline: none;
+}
+
+.main-content__searchbox .fa-search {
   font-size: .9rem;
   color: #9AA0A6;
   z-index: 100;
 }
 
-.main-content .fa-microphone-alt {
-  position: absolute;
-  top: 50%;
-  left: 69.5%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.main-content__searchbox .fa-microphone-alt {
   font-size: .9rem;
   color: #9AA0A6;
   z-index: 100;
 }
 
 .main-content__logo {
-  margin-bottom: -.1rem;
-}
-
-.main-content__searchbar {
-  width: 42.5%;
-  height: 8.9%;
-  border-radius: 10rem;
-  border: solid 1px #DFE1E5;
-  font-size: 1rem;
-  padding: 0 2.8rem;
-  -webkit-transform: translateY(0.6rem);
-          transform: translateY(0.6rem);
-}
-
-.main-content__searchbar:focus {
-  outline: none;
-}
-
-.main-content__searchbar:hover, .main-content__searchbar:focus {
-  -webkit-box-shadow: 0 0.1rem 0.35rem #DFE1E5;
-          box-shadow: 0 0.1rem 0.35rem #DFE1E5;
+  width: 17rem;
 }
 
 .main-content__buttons {
@@ -508,6 +545,7 @@ main {
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-top: 2rem;
 }
 
 .main-content__buttons-1 {
@@ -584,6 +622,14 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 56.25) and (max-width: 75em) {
+  .footer__list-2 {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 .footer__list-2--left {

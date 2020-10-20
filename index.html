@@ -8,9 +8,10 @@
     <title>Google</title>
     <link rel="stylesheet" href="./icons/fontawesome-free-5.14.0-web/fontawesome-free-5.14.0-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
 <body>
     <div class="dropdown-profile">
-        
+
         <input type="checkbox" class="dropdown-profile__checkbox" id="navi_toggle_profile">
         <div class="dropdown-profile__background">
             <div class="dropdown-profile__part1">
@@ -93,15 +94,18 @@
                 <li class="navbar__nav--item"><a href="" class="navbar__nav--item__link">Gmail</a></li>
                 <li class="navbar__nav--item"><a href="" class="navbar__nav--item__link">Images</a></li>
                 <li class="navbar__nav--item"><label for="navi_toggle"><i class="fas fa-th"></i></label></li>
-                <li class="navbar__nav--item"><label for="navi_toggle_profile"><img src="./images/user.jpg" alt="profile picture"
-                    class="navbar__nav--item-img"></label></li>
+                <li class="navbar__nav--item"><label for="navi_toggle_profile"><img src="./images/user.jpg"
+                            alt="profile picture" class="navbar__nav--item-img"></label></li>
             </ul>
         </section>
         <section class="main-content">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-microphone-alt"></i>
             <img src="./images/googlelogo.png" alt="Logo" class="main-content__logo small-margin">
-            <input type="text" name="searchbar" class="main-content__searchbar small-margin">
+            <div class="main-content__searchbox">
+                <i class="fas fa-search"></i>
+                <input type="text" name="searchbar" class="main-content__searchbox__searchbar small-margin">
+                <i class="fas fa-microphone-alt"></i>
+            </div>
+            </div>
             <div class="main-content__buttons small-margin">
                 <button class="main-content__buttons-1">Recherche Google</button>
                 <button class="main-content__buttons-1">J'ai de la chance</button>
@@ -141,4 +145,5 @@
         </section>
     </main>
 </body>
+
 </html>
