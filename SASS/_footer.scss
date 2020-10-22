@@ -1,7 +1,15 @@
 .footer{
     background-color: $color-grey-light4;
+/*     @include responsive(phone){
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    } */
+    width: 100%;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    
+    //grid-template-rows: repeat(2, 1fr);
     &__list{
         &-1{
             width: 100%;
@@ -20,14 +28,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            @include responsive(tab-land){
-                align-items: flex-end;
-            } 
             &--left{
                 list-style: none;
                 display: flex;
                 margin: 0 2rem;
-                
                 &-item{
                     &:hover{
                     text-decoration: underline;
@@ -47,12 +51,11 @@
                 display: flex;
                 list-style: none;
                 margin: 0 2rem;
-                
+                justify-content: flex-end;
                 &-item{
                     &:hover{
                     text-decoration: underline;
                 }
-                    
                     &:not(:last-child){
                         margin: 0 .8rem;
                     }

@@ -3,6 +3,7 @@
 }
 
 /*
+small phone => 0 -- 
 phone => 0 -- 600px => 37.5em
 tab-port => 600px -- 900px => 56.25em
 tab-land => 900px -- 1200px => 75em
@@ -31,19 +32,19 @@ html {
 
 @media (min-width: 56.25) and (max-width: 75em) {
   html {
-    font-size: 97%;
+    font-size: 90%;
   }
 }
 
-@media (min-width: 43.75em) and (max-width: 56.25em) {
+@media (min-width: 37.5em) and (max-width: 56.25em) {
   html {
-    font-size: 85%;
+    font-size: 80%;
   }
 }
 
-@media (max-width: 43.75em) {
+@media (max-width: 46.875em) {
   html {
-    font-size: 70%;
+    font-size: 50%;
   }
 }
 
@@ -64,8 +65,9 @@ main {
   display: grid;
   -ms-grid-columns: 1;
       grid-template-columns: 1;
-  -ms-grid-rows: 7vh 80vh 13vh;
-      grid-template-rows: 7vh 80vh 13vh;
+  -ms-grid-rows: 7vh 80vh auto;
+      grid-template-rows: 7vh 80vh auto;
+  height: 100vh;
 }
 
 .navbar {
@@ -587,10 +589,15 @@ main {
 
 .footer {
   background-color: #F2F2F2;
+  /*     @include responsive(phone){
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    } */
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
 }
 
 .footer__list-1 {
@@ -622,14 +629,6 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@media (min-width: 56.25) and (max-width: 75em) {
-  .footer__list-2 {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
 }
 
 .footer__list-2--left {
@@ -664,6 +663,9 @@ main {
   display: flex;
   list-style: none;
   margin: 0 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .footer__list-2--right-item:hover {
