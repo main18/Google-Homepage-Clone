@@ -73,8 +73,8 @@ main {
   position: relative;
   -ms-grid-columns: 1;
       grid-template-columns: 1;
-  -ms-grid-rows: 7vh 80vh 13vh;
-      grid-template-rows: 7vh 80vh 13vh;
+  -ms-grid-rows: 7vh 80vh auto;
+      grid-template-rows: 7vh 80vh auto;
   height: 100vh;
   width: 100vw;
 }
@@ -603,6 +603,8 @@ main {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .footer__list-1 {
