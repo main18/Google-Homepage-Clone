@@ -12,7 +12,7 @@
 }
 
 /*
-small phone => 0 -- 
+small phone => 0 -- 400 => 25em
 phone => 0 -- 600px => 37.5em
 tab-port => 600px -- 900px => 56.25em
 tab-land => 900px -- 1200px => 75em
@@ -21,6 +21,9 @@ tab-land => 900px -- 1200px => 75em
 */
 
 @mixin responsive($breakpoint){
+    @if $breakpoint == small-phone { 
+        @media (max-width: 25em) {@content};
+    }
     @if $breakpoint == phone { 
         @media (max-width: 46.875em) {@content};
     }

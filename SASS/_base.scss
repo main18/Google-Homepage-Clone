@@ -34,6 +34,8 @@ $big-desktop:112.5em; //min-width : => 1800px
 }
 
 html{  
+    height: 100%;
+
     font-size: 100%; // 10px / 16px * 100  
     @include responsive(tab-land){
         font-size: 90%;
@@ -41,8 +43,12 @@ html{
     @include responsive(tab-port){
         font-size: 80%;
     } 
+    /*
+    @include responsive(small-phone){
+        font-size: 40%;
+    } */
     @include responsive(phone){
-        font-size: 50%;
+        font-size: 60%;
     } 
     @include responsive(big-desktop){
         font-size: 120%;
@@ -50,6 +56,7 @@ html{
 }
 
 body{
+    height: 100%;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -59,4 +66,5 @@ main{
     grid-template-columns: 1;
     grid-template-rows: 7vh 80vh auto;
     height: 100vh;
+    width: 100vw;
 }

@@ -3,7 +3,7 @@
 }
 
 /*
-small phone => 0 -- 
+small phone => 0 -- 400 => 25em
 phone => 0 -- 600px => 37.5em
 tab-port => 600px -- 900px => 56.25em
 tab-land => 900px -- 1200px => 75em
@@ -27,7 +27,12 @@ $big-desktop:112.5em; //min-width : => 1800px
 }
 
 html {
+  height: 100%;
   font-size: 100%;
+  /*
+    @include responsive(small-phone){
+        font-size: 40%;
+    } */
 }
 
 @media (min-width: 56.25) and (max-width: 75em) {
@@ -44,7 +49,7 @@ html {
 
 @media (max-width: 46.875em) {
   html {
-    font-size: 50%;
+    font-size: 60%;
   }
 }
 
@@ -55,6 +60,7 @@ html {
 }
 
 body {
+  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -68,6 +74,7 @@ main {
   -ms-grid-rows: 7vh 80vh auto;
       grid-template-rows: 7vh 80vh auto;
   height: 100vh;
+  width: 100vw;
 }
 
 .navbar {
@@ -589,15 +596,14 @@ main {
 
 .footer {
   background-color: #F2F2F2;
-  /*     @include responsive(phone){
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 0;
-    } */
   width: 100%;
+  height: 5rem;
   display: -ms-grid;
   display: grid;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer__list-1 {
@@ -619,6 +625,12 @@ main {
   font-weight: lighter;
 }
 
+@media (max-width: 46.875em) {
+  .footer__list-1-country-name {
+    text-align: center;
+  }
+}
+
 .footer__list-2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -631,12 +643,27 @@ main {
           justify-content: space-between;
 }
 
+@media (max-width: 46.875em) {
+  .footer__list-2 {
+    display: block;
+  }
+}
+
 .footer__list-2--left {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 2rem;
+}
+
+@media (max-width: 46.875em) {
+  .footer__list-2--left {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: .5rem;
+  }
 }
 
 .footer__list-2--left-item:hover {
@@ -666,6 +693,14 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media (max-width: 46.875em) {
+  .footer__list-2--right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer__list-2--right-item:hover {
