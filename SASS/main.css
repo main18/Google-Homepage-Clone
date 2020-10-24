@@ -61,6 +61,7 @@ html {
 
 body {
   height: 100%;
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -69,10 +70,11 @@ body {
 main {
   display: -ms-grid;
   display: grid;
+  position: relative;
   -ms-grid-columns: 1;
       grid-template-columns: 1;
-  -ms-grid-rows: 7vh 80vh auto;
-      grid-template-rows: 7vh 80vh auto;
+  -ms-grid-rows: 7vh 80vh 13vh;
+      grid-template-rows: 7vh 80vh 13vh;
   height: 100vh;
   width: 100vw;
 }
@@ -596,14 +598,11 @@ main {
 
 .footer {
   background-color: #F2F2F2;
-  width: 100%;
-  height: auto;
   display: -ms-grid;
   display: grid;
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
 }
 
 .footer__list-1 {
