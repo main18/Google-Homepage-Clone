@@ -18,6 +18,9 @@
         border-radius: 30px;
         padding: 1rem;
         transform: translateY(.6rem);
+        @include responsive(phone){
+            width: 30rem;
+        } 
         &:hover {
             box-shadow: 0 .1rem .35rem $color-grey-light1;
         }
@@ -47,7 +50,6 @@
 
     &__logo{
         width: 17rem;
-
     }
     
     &__buttons{
