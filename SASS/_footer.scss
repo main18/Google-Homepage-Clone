@@ -22,7 +22,10 @@
             align-items: center;
             justify-content: space-between;
             @include responsive(phone){
-                display: block ;
+                /* display: block; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             &--left{
                 list-style: none;
