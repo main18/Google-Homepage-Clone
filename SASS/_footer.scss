@@ -30,7 +30,6 @@
                 margin: 0 2rem;
                 @include responsive(phone){
                     justify-content: center;
-                    padding-bottom:.5rem;
                 }
                 &-item{
                     &:hover{
@@ -54,7 +53,6 @@
                 justify-content: flex-end;
                 @include responsive(phone){
                     justify-content: center;
-                    padding-top: .5rem;
                 }
                 &-item{
                     &:hover{
