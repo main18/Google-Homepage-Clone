@@ -21,9 +21,6 @@ tab-land => 900px -- 1200px => 75em
 */
 
 @mixin responsive($breakpoint){
-    @if $breakpoint == small-phone { 
-        @media (max-width: 25em) {@content};
-    }
     @if $breakpoint == phone { 
         @media (max-width: 46.875em) {@content};
     }
